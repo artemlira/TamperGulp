@@ -1,0 +1,7 @@
+.contacts {
+   @extend %content;
+
+   h2 {
+      color: $color2;
+   }
+}

@@ -1,0 +1,23 @@
+.footer {
+   color: $color3;
+   background-color: $color1;
+   display: flex;
+   align-items: center;
+   // @extend %content;
+   min-height: 231px;
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &>div {
+         display: flex;
+         justify-content: flex-end;
+      }
+   }
+
+   .button {
+      margin: 0;
+   }
+}
