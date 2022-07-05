@@ -2,15 +2,17 @@
    @extend %content;
 
    h2 {
-
       color: $color2;
    }
 
    .container {
       justify-content: space-between;
 
+
+
       .about__item {
-         max-width: 404px;
+         @extend %div;
+         padding-right: 10px;
       }
 
       @include phone {
@@ -19,7 +21,7 @@
 
       &>div {
          @include tablet {
-            width: 50%;
+            width: 309px;
          }
 
          @include phone {

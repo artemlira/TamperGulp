@@ -4,4 +4,71 @@
    h2 {
       color: $color2;
    }
+
+   @include phone {
+      padding: 0 10px;
+   }
+
+
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+
+      &>div {
+         width: none;
+      }
+
+      .contacts__item_1 {
+         max-width: 617px;
+         padding-right: 10px;
+
+         p {
+            color: $color1;
+         }
+
+         @include phone {
+            max-width: 384px;
+         }
+      }
+
+      .contacts__item_2 {
+         max-width: 293px;
+
+         @include bigTablet {
+            min-width: 210px;
+         }
+
+         @include tablet {
+            max-width: 309px !important;
+         }
+
+         @include phone {
+            max-width: 309px;
+            margin-bottom: 96px;
+         }
+
+         p {
+            color: $color4;
+         }
+      }
+
+
+      @include phone {
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-end;
+      }
+
+      &>div {
+         @include tablet {
+            width: 309px;
+         }
+
+         @include phone {
+
+            margin: 33px 0;
+         }
+      }
+   }
 }

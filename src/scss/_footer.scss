@@ -6,18 +6,48 @@
    // @extend %content;
    min-height: 231px;
 
+   @include tablet {
+      max-height: 269px;
+   }
+
+
    .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      &>div {
+      @include tablet {
+         flex-direction: column;
+         justify-content: normal;
+         max-height: 110px;
+      }
+
+      p {
+         @include tablet {
+            margin-bottom: 33px;
+         }
+      }
+
+      // &>div {
+      //    display: flex;
+      //    justify-content: flex-end;
+      // }
+   }
+
+   .btn {
+      @include tablet {
          display: flex;
-         justify-content: flex-end;
+         justify-content: center;
+         align-items: center;
       }
    }
 
    .button {
       margin: 0;
+
+      @include tablet {
+         width: 256px;
+         height: 44px;
+      }
    }
 }

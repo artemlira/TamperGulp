@@ -4,13 +4,17 @@
    box-sizing: border-box;
 }
 
+section {
+   padding: 0 10px;
+}
+
 body {
    font: {
       family: 'Abel', sans-serif;
       size: 24px;
    }
 
-   line-height: 1.5em;
+   line-height: 118%;
    color: $color1;
 }
 
@@ -20,17 +24,25 @@ body {
    margin: 0 auto;
    display: flex;
 
-   &>div {
-      width: 45%;
+   @include tablet {
+      max-width: 648px;
    }
+
+   @include phone {
+      max-width: 404px;
+   }
+
+   // &>div {
+   //    width: 45%;
+   // }
 
 
 }
 
 h2 {
    font-size: 36px;
-   line-height: 24px;
-   letter-spacing: 0.1em;
+   line-height: 52%;
+   letter-spacing: 10%;
    text-transform: uppercase;
    margin-bottom: 26px;
 }

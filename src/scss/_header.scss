@@ -3,6 +3,16 @@
    color: $color3;
    min-height: 512px;
 
+   @include tablet {
+      min-height: 1024px;
+   }
+
+   @include phone {
+      min-height: 896px;
+   }
+
+
+
    // @extend %content;
 
    h2 {
@@ -13,8 +23,47 @@
    }
 }
 
-.container {
-   margin-top: 40px;
+.header__title {
+   width: 90%;
+   max-width: 940px;
+   margin-top: 40px !important;
+   margin: 0 auto;
+
+   @include tablet {
+      max-width: 648px;
+      min-height: 228px;
+      margin-top: 188px !important;
+   }
+
+   @include phone {
+      max-width: 384px;
+      margin-top: 179px !important;
+   }
+}
+
+.header__logo {
+   @include tablet {
+      min-width: 196px;
+      min-height: 42px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+
+   }
+
+   & img {
+      @include tablet {
+         margin: 80px 0 49px 0;
+      }
+   }
+}
+
+.header__list {
+   @include tablet {
+      max-width: 422px;
+      max-height: 54px;
+      margin: 0 auto;
+   }
 }
 
 .container__header {
@@ -26,8 +75,26 @@
    justify-content: space-between;
    align-items: center;
 
+   @include tablet {
+      max-width: 648px;
+      display: block;
+   }
+
+   @include phone {
+      max-width: 384px;
+   }
+
    ul {
       display: flex;
+
+      @include tablet {
+         justify-content: space-between;
+      }
+
+      @include phone {
+         display: none;
+      }
+
    }
 
    li {
@@ -63,4 +130,12 @@ hr {
    height: 2px;
    color: $color3;
    margin: 0 auto;
+
+   @include tablet {
+      max-width: 648px;
+   }
+
+   @include phone {
+      max-width: 384px;
+   }
 }
